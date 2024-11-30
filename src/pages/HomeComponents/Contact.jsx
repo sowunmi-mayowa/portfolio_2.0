@@ -1,6 +1,39 @@
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa"
 import { Link } from "react-router-dom"
+import * as yup from "yup"
+import { useForm } from "react-hook-form"
+import {yupResolver} from "@hookform/resolvers/yup"
+import { db } from "../../config/firebase"
+import { addDoc, collection} from "firebase/firestore"
+import { toast, ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
+    const schema = yup.object().shape({
+        name: yup.string().required(),
+        email: yup.string().email().required(),
+        message: yup.string().required()
+    });
+
+    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+
+    const onSubmitHandler = async (data) => {
+        try{
+            const docref = await addDoc(collection(db, "contacts"), data);
+            toast.success("data added successfully", {
+                position: "bottom-right"
+            })
+        }catch(e){
+            toast.error("some error occured", {
+                position: "bottom-right"
+            })
+            console.log("some error occured", e)
+        }
+        reset()
+    }
   return (
     <div className='bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat'>
         <div className='mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl py-8 md:py-16'>
@@ -26,24 +59,28 @@ const Contact = () => {
                     </Link>
                 </div>
                 <div className="basis-1/2 ">
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmitHandler)}>
                         <div className="mb-4">
                             <label htmlFor="name">Name</label>
-                            <input type="text" name="name" id="name" placeholder="John Doe" className="bg-[#fff] dark:bg-[#001122] w-full p-4 rounded-xl" />
+                            <input type="text" name="name" id="name" placeholder="John Doe" className="bg-[#fff] dark:bg-[#001122] w-full p-4 rounded-xl" {...register("name")} />
+                            <p className="text-xs text-rose-600 mt-1">  {errors.name?.message} </p>
                         </div>
                         <div className="mb-4">
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="email" id="email" className="bg-[#fff] dark:bg-[#001122] w-full p-4 rounded-xl" placeholder="johndoe@email.com" />
+                            <input type="email" name="email" id="email" className="bg-[#fff] dark:bg-[#001122] w-full p-4 rounded-xl" placeholder="johndoe@email.com" {...register("email")} />
+                            <p className="text-xs text-rose-600 mt-1">  {errors.email?.message} </p>
                         </div>
                         <div className="mb-4">
                             <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" className="bg-[#fff] dark:bg-[#001122] w-full p-4 rounded-xl" placeholder="Enter Message"></textarea>
+                            <textarea name="message" id="message" className="bg-[#fff] dark:bg-[#001122] w-full p-4 rounded-xl" placeholder="Enter Message" {...register("message")}></textarea>
+                            <p className="text-xs text-rose-600 mt-1">  {errors.message?.message} </p>
                         </div>
-                        <input type="submit" value="Send Message" className="bg-gray-300 dark:bg-violet-600 border-2  w-full p-4 rounded-xl inline-block" />
+                        <input type="submit" value="Send Message" className="bg-gray-300 dark:bg-[#001122] cursor-pointer border-2  w-full p-4 rounded-xl inline-block" />
                     </form>
                 </div>
             </div>
         </div>
+        < ToastContainer />
     </div>
   )
 }
