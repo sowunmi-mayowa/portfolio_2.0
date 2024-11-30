@@ -9,7 +9,7 @@ const Hero = () => {
       ]
       const words2 = [
         {
-          text: "Welcome to my  protfolio website.",
+          text: "Welcome To my  Portfolio Website.",
         }
       ]
   return (
