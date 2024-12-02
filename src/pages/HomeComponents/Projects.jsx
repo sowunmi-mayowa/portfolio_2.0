@@ -9,18 +9,18 @@ const Projects = () => {
             title: "SiQuote",
             company: "Ovabor Labs",
             stack: ["React", "firebase"],
-            link: "https://siquote.vercel.app/",
+            link: "https://si-quotes-v1-1.vercel.app/",
             image: projectImg1,
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus iure porro minima similique suscipit atque quasi distinctio voluptatem fuga, obcaecati inventore expedita persp"
+            description: "SiQuote allows users to compare and share pricing for satellite imagery services. It provides a streamlined platform to browse and evaluate quotes for satellite data, simplifying the decision-making process for individuals and organizations requiring geospatial information"
         },
         {
             id: Math.floor(Math.random() * 1000),
             title: "Equipfy",
             company: "Ovabor Labs",
             stack: ["React", "MongoDB", "Tailwind"],
-            link: "https://equipfy.vercel.app/",
+            link: "https://equipfy-v1-1-1.onrender.com/",
             image: projectImg2,
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus iure porro minima similique suscipit atque quasi distinctio voluptatem fuga, obcaecati inventore expedita persp"
+            description: "eQuipfy is a platform for buying and selling used heavy equipment across Africa. It connects buyers and sellers, offering a user-friendly experience to trade machinery efficiently while promoting sustainable use of resources"
         },
         {
             id: Math.floor(Math.random() * 1000),
@@ -33,7 +33,7 @@ const Projects = () => {
         }
     ]
   return (
-    <div className='bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat'>
+    <div className='bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat' id="projects"> 
         <div className='mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl md:py-16 font-montserrat z-50'>
             <div className='flex flex-col :justify-center md:items-center mb-6'>
                 <p className="uppercase text-sm md:text-lg pt-8 pb-2">projects</p>

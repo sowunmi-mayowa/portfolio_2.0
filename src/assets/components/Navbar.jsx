@@ -15,7 +15,7 @@ const Navbar = () => {
                         <Link to="/">
                             <li className="inline-block px-4 text-sm capitalize">home</li>
                         </Link>
-                        <Link to='/projects'>
+                        <Link to='#projects'>
                             <li className="inline-block px-4 text-sm capitalize">projects</li>
                         </Link>
                         <Link to='/about'>

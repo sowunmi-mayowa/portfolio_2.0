@@ -74,12 +74,13 @@ const Profile = () => {
             </div> */}
             <div className="flex gap-4 flex-col lg:flex-row items-center pt-4">
             {[
-                { icon: <FaLinkedin className="text-2xl" />, label: 'LinkedIn' },
-                { icon: <FaGithub className="text-2xl" />, label: 'GitHub' },
-                { icon: <FaTwitter className="text-2xl" />, label: 'Twitter' }
+                { icon: <FaLinkedin className="text-2xl" />, label: 'LinkedIn', link: 'https://www.linkedin.com/in/sowunmi-oluwanayowa/' },
+                { icon: <FaGithub className="text-2xl" />, label: 'GitHub', link: 'https://github.com/sowunmi-mayowa' },
+                { icon: <FaTwitter className="text-2xl" />, label: 'Twitter', link: 'https://x.com/devmayowa' }
             ].map((item, index) => (
                 <Link
-                    to="#"
+                    target="_blank"
+                    to={item.link}
                     key={index}
                     className="flex gap-2 items-center w-full bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl h-full relative overflow-hidden"
                     onMouseMove={(e) => handleMouseMove(e, index)}
