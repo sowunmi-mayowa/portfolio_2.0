@@ -6,7 +6,7 @@ import { useState } from "react";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="pt-4">
+    <div className="pt-4 fixed w-full top-2 z-50">
         <div className="mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl md:py-8 font-montserrat sticky top-3 z-50">
             <div className="flex justify-between items-center bg-[#ebebeb] dark:bg-[#0d151c] p-4 md:p-8 rounded-full border-black dark:border-[#566370] border">
                 <div className="font-bold text-xl">devMayowa</div>
