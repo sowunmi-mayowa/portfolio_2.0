@@ -1,5 +1,5 @@
 import Swiitch from "./Swiitch"
-import { Link } from "react-router-dom"
+import { Link } from "react-scroll"
 import { IoMenuSharp } from "react-icons/io5";
 import { useState } from "react";
 
@@ -15,17 +15,19 @@ const Navbar = () => {
                         <Link to="/">
                             <li className="inline-block px-4 text-sm capitalize">home</li>
                         </Link>
-                        <Link to='#projects'>
-                            <li className="inline-block px-4 text-sm capitalize">projects</li>
+                        <Link to='projects' smooth={true} duration={500}>
+                            <li className="inline-block px-4 text-sm capitalize cursor-pointer">projects</li>
                         </Link>
-                        <Link to='/about'>
-                            <li className="inline-block px-4 text-sm capitalize">about</li>
+                        <Link to='about' smooth={true} duration={500}>
+                            <li className="inline-block px-4 text-sm capitalize cursor-pointer">about</li>
                         </Link>
                     </ul>
                 </div>
                 <div className="hidden lg:block">
                     <div className="flex items-center gap-6 ">
-                        <button className="bg-orange text-white px-6 py-3 rounded-full">Reach out</button>
+                        <Link to='contact' smooth={true} duration={500}>
+                            <button className="bg-orange text-white px-6 py-3 rounded-full">Reach out</button>
+                        </Link>
                         <Swiitch />
                     </div>
                 </div>
@@ -38,15 +40,17 @@ const Navbar = () => {
                     <Link to="/">
                         <li className="inline-block px-4 text-sm capitalize text-black dark:text-gray-400">home</li>
                     </Link>
-                    <Link to='/projects'>
-                        <li className="inline-block px-4 text-sm capitalize">projects</li>
+                    <Link to='projects' smooth={true} duration={500}>
+                        <li className="inline-block px-4 text-sm capitalize cursor-pointer">projects</li>
                     </Link>
-                    <Link to='/about'>
-                        <li className="inline-block px-4 text-sm capitalize">about</li>
+                    <Link to='about' smooth={true} duration={500}>
+                        <li className="inline-block px-4 text-sm capitalize cursor-pointer">about</li>
                     </Link>
                 </ul>
                 <div className="flex items-center gap-6 ">
-                    <button className="bg-orange text-white px-6 py-3 rounded-full">Reach out</button>
+                    <Link to='contact' smooth={true} duration={500}>
+                        <button className="bg-orange text-white px-6 py-3 cursor-pointer rounded-full">Reach out</button>
+                    </Link>
                     <Swiitch />
                 </div>
             </div>

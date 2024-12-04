@@ -17,6 +17,7 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_MEASUREMEN_ID
 };
 
+console.log(import.meta.env);
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
