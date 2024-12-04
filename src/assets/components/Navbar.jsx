@@ -2,6 +2,7 @@ import Swiitch from "./Swiitch"
 import { Link } from "react-scroll"
 import { IoMenuSharp } from "react-icons/io5";
 import { useState } from "react";
+import { ImCancelCircle } from "react-icons/im";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,11 @@ const Navbar = () => {
                         <Swiitch />
                     </div>
                 </div>
-            <IoMenuSharp  className="lg:hidden cursor-pointer text-2xl" onClick={() => setIsOpen(!isOpen)}/>
+                {
+                    !isOpen ?
+                    <IoMenuSharp  className="lg:hidden cursor-pointer text-2xl" onClick={() => setIsOpen(!isOpen)}/> :
+                    <ImCancelCircle className="lg:hidden cursor-pointer text-2xl" onClick={() => setIsOpen(!isOpen)} />
+                }
             </div>
         </div>
         <div className={`lg:hidden fixed z-10 top-0 pt-20 right-0 h-[300px] w-full bg-[#ebebeb] dark:bg-[#0d151c] transition-transform transform ${isOpen ? "translate-y-0" : "-translate-y-full"} ease-in-out duration-700 shadow-lg`}>
