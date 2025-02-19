@@ -35,7 +35,7 @@ const Projects = () => {
     ]
   return (
     <Element name="projects">
-        <div className='bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat'> 
+        <div className='bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat pb-12 lg:pb-0'> 
             <div className='mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl md:py-16 font-montserrat z-50'>
                 <div className='flex flex-col :justify-center md:items-center mb-6'>
                     <p className="uppercase text-sm md:text-lg pt-8 pb-2">projects</p>
