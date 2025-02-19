@@ -4,7 +4,7 @@ import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Footer = () => {
     return (
       <footer className="bg-[#f9f9f9] dark:bg-[#001122] p-8 rounded-xl mt-10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-7xl mx-auto flex justify-between items-center flex-col md:flex-row">
           
           {/* Brand / About Section */}
           <div className="text-center md:text-left">
@@ -16,17 +16,17 @@ const Footer = () => {
   
        
           {/* Social Media Icons */}
-          <div className="flex justify-center md:justify-end space-x-6">
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-2xl">
+          <div className="flex justify-center md:justify-end space-x-6 pt-4 md:pt-0">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaTwitter />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-2xl">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaGithub />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-2xl">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaLinkedin />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-2xl">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaInstagram />
             </a>
           </div>
