@@ -5,12 +5,14 @@ import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 import { ErrorpPage } from './pages/ErrorPage';
 import Home from './pages/Home';
 import Navbar from './assets/components/Navbar';
+import Projects from './pages/Projects';
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" errorElement={<ErrorpPage />}>
         <Route path="/" element={ <Home /> } errorElement={<ErrorpPage />} />
+        <Route path="/projects" element={<Projects />} errorElement={<ErrorpPage />} />
       </Route>
     )
   )

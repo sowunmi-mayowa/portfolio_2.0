@@ -1,39 +1,10 @@
 import ProjectCard from "../../assets/components/ProjectCard"
-import projectImg1 from "../../assets/project-img1.png"
-import projectImg2 from "../../assets/project-img2.png"
-import projectImg3 from "../../assets/project-img3.png"
 import { Element } from "react-scroll"
+import { Link } from "react-router-dom"
+import { projectData } from "../../utils/projects"
 
 const Projects = () => {
-    const projectData = [
-        {
-            id: Math.floor(Math.random() * 1000),
-            title: "SiQuote",
-            company: "Ovabor Labs",
-            stack: ["React", "firebase"],
-            link: "https://si-quotes-v1-1.vercel.app/",
-            image: projectImg1,
-            description: "SiQuote allows users to compare and share pricing for satellite imagery services. It provides a streamlined platform to browse and evaluate quotes for satellite data, simplifying the decision-making process for individuals and organizations requiring geospatial information"
-        },
-        {
-            id: Math.floor(Math.random() * 1000),
-            title: "Equipfy",
-            company: "Ovabor Labs",
-            stack: ["React", "MongoDB", "Tailwind"],
-            link: "https://equipfy-v1-1-1.onrender.com/",
-            image: projectImg2,
-            description: "eQuipfy is a platform for buying and selling used heavy equipment across Africa. It connects buyers and sellers, offering a user-friendly experience to trade machinery efficiently while promoting sustainable use of resources"
-        },
-        {
-            id: Math.floor(Math.random() * 1000),
-            title: "BrightLife Enhancement Service",
-            company: "Client Project",
-            stack: ["React", "MongoDB", "Tailwind"],
-            link: "https://brightlifeenhancementservice.vercel.app/",
-            image: projectImg3,
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus iure porro minima similique suscipit atque quasi distinctio voluptatem fuga, obcaecati inventore expedita persp"
-        }
-    ]
+    
   return (
     <Element name="projects">
         <div className='bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat pb-12 lg:pb-0'> 
@@ -45,7 +16,7 @@ const Projects = () => {
                 <div className="hidden md:block">
 
                     {
-                        projectData.map((project) => (
+                        projectData.slice(0, 3).map((project) => (
                             <div key={project.id} className='bg-[#fff] dark:bg-[#001122] rounded-3xl mb-4 border-2 border-[#ebebeb] dark:border-gray-700'>
                                 <div className='flex flex-col md:flex-row gap-8 items-center p-8'>
                                     <div>
@@ -75,13 +46,13 @@ const Projects = () => {
                     }
                 </div>
                 <div className="md:hidden">
-                {projectData.map((project) => (
+                {projectData.slice(0, 3).map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
                 </div>
                 <div className="flex justify-center mt-6">
-
-                    <button className="bg-orange text-white px-6 py-2 rounded-full">See more</button>
+                    <Link to="/projects" className="bg-orange text-white px-6 py-2 rounded-full">See more</Link>
+                    {/* <button className="bg-orange text-white px-6 py-2 rounded-full">See more</button> */}
                 </div>
             </div>
         </div>
