@@ -2,6 +2,8 @@ import projectImg1 from "../assets/project-img1.png";
 import projectImg2 from "../assets/project-img2.png";
 import projectImg3 from "../assets/project-img3.png";
 import projectImg4 from "../assets/project-img4.png";
+import projectImg5 from "../assets/project-img5.png";
+import projectImg6 from "../assets/project-img6.png";
 
 export const projectData = [
   {
@@ -50,8 +52,18 @@ export const projectData = [
     company: "Client Project",
     stack: ["React", "Tailwind"],
     link: "https://d-noir.vercel.app/",
-    image: projectImg2,
+    image: projectImg5,
     description:
       "D'noir Poetry Bar is a website created to display the portfolio and price list of services of a professional ",
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    title: "OvaborLabs Company Website",
+    company: "Ovabor Labs",
+    stack: ["React", "Tailwind", "Firebase"],
+    link: "https://ovabor.com/",
+    image: projectImg6,
+    description:
+      "The official website for Ovabor Labs, a tech company specializing in web and mobile app development and AI solutions. The site showcases the company's portfolio, services, team, and contact information",
   },
 ];
