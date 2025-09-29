@@ -4,6 +4,7 @@ import projectImg3 from "../assets/project-img3.png";
 import projectImg4 from "../assets/project-img4.png";
 import projectImg5 from "../assets/project-img5.png";
 import projectImg6 from "../assets/project-img6.png";
+import projectImg7 from "../assets/project-img7.png";
 
 export const projectData = [
   {
@@ -65,5 +66,15 @@ export const projectData = [
     image: projectImg6,
     description:
       "The official website for Ovabor Labs, a tech company specializing in web and mobile app development and AI solutions. The site showcases the company's portfolio, services, team, and contact information",
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    title: "Arnold token website",
+    company: "Client Project",
+    stack: ["React", "Tailwind", "node js", "Mongo db"],
+    link: "https://arnoldtoken.com/",
+    image: projectImg7,
+    description:
+      "Adrnold token is a website built for an airdrop  on sui block chain. the website allows users participate in the airdrop and claim their tokens",
   },
 ];
