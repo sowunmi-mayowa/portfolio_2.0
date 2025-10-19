@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Background Overlay (Optional) */}
       {/* <img src={bgOverlay} alt="" className="absolute inset-0 opacity-50 dark:opacity-50 hidden md:block" /> */}
 
-      <div className="max-w-lg text-left">
+      <div className="w-full max-w-lg text-left break-words">
         <TypewriterEffectSmooth words={words} />
         <h3 className="text-xl md:text-3xl font-bold mt-4">
           Welcome to my Portfolio website.
@@ -32,7 +32,9 @@ const Hero = () => {
         <img
           src={hero}
           alt="Hero image"
-          className="w-full h-auto md:hidden lg:block"
+          loading="lazy"
+          decoding="async"
+          className="w-full h-auto block mx-auto lg:mx-0"
         />
       </div>
     </div>

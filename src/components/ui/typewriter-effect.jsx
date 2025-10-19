@@ -108,7 +108,7 @@ export const TypewriterEffectSmooth = ({
                 <span
                   key={`char-${index}`}
                   className={cn(
-                    `dark:text-white text-gray-900 text-center text-[45px] `,
+                    `dark:text-white text-gray-900`,
                     word.className
                   )}
                 >
@@ -123,7 +123,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 md:my-2", className)}>
+    <div className={cn("flex items-center flex-wrap md:my-2", className)}>
       <motion.div
         className="overflow-hidden pb-2"
         initial={{
@@ -138,14 +138,9 @@ export const TypewriterEffectSmooth = ({
           delay: 1,
         }}
       >
-        <div
-          className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold"
-          style={{
-            whiteSpace: "nowrap",
-          }}
-        >
+        <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold whitespace-normal md:whitespace-nowrap">
           {renderWords()}{" "}
-        </div>{" "}
+        </div>
       </motion.div>
       <motion.span
         initial={{
@@ -161,7 +156,7 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 ",
+          "block rounded-sm w-[4px] h-4 sm:h-6 xl:h-12",
           cursorClassName
         )}
       ></motion.span>
