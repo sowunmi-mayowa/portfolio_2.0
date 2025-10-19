@@ -1,6 +1,7 @@
 import { TypewriterEffectSmooth } from "../../components/ui/typewriter-effect";
 import bgOverlay from "../../assets/bg-overlay.png";
 import hero from "../../assets/hero-img.png";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const words = [
@@ -23,9 +24,11 @@ const Hero = () => {
           I transform ideas into digital realities, focusing on creating unique
           and engaging experiences for users.
         </p>
-        <button className="mt-6 bg-orange text-white px-6 py-3 rounded-full transition-transform transform hover:scale-105">
-          Reach out
-        </button>
+        <Link to="contact" smooth={true} duration={500}>
+          <button className="mt-6 bg-orange text-white px-6 py-3 rounded-full transition-transform transform hover:scale-105">
+            Reach out
+          </button>
+        </Link>
       </div>
 
       <div className="mt-8 lg:mt-0 w-[80%] max-w-[400px] md:max-w-[500px] lg:max-w-[550px]">
