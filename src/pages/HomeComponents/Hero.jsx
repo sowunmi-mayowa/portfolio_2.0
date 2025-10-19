@@ -16,7 +16,7 @@ const Hero = () => {
 
       <div className="w-full max-w-lg text-left break-words">
         <TypewriterEffectSmooth words={words} />
-        <h3 className="text-xl md:text-3xl font-bold mt-4">
+        <h3 className="text-xl md:text-3xl font-bold">
           Welcome to my Portfolio website.
         </h3>
         <p className="mt-2 text-md md:text-lg max-w-xl">
