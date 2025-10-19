@@ -123,7 +123,12 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex items-center flex-wrap md:my-2", className)}>
+    <div
+      className={cn(
+        "flex items-center flex-wrap md:my-2 lg:h-[50px]",
+        className
+      )}
+    >
       <motion.div
         className="overflow-hidden pb-2"
         initial={{
@@ -138,7 +143,7 @@ export const TypewriterEffectSmooth = ({
           delay: 1,
         }}
       >
-        <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold whitespace-normal md:whitespace-nowrap">
+        <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold whitespace-normal md:whitespace-nowrap flex items-center">
           {renderWords()}{" "}
         </div>
       </motion.div>
