@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import Reveal from "../../components/ui/reveal";
 
 const Profile = () => {
-  const { ref, isInView } = useScrollAnimation();
-
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredCard, setHoveredCard] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -51,17 +48,19 @@ const Profile = () => {
       : {};
   return (
     <Element name="about">
-      <motion.div
-        ref={ref}
+      <Reveal
         className="dark:bg-[#000810] bg-white font-montserrat"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
+        direction="up"
+        delay={0.1}
       >
         <div className="mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl py-16">
           <div className="flex flex-col-reverse lg:flex-row items-stretch gap-10 h-full">
             {/* Text Section */}
-            <div className="flex-1 bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl flex flex-col min-h-full">
+            <Reveal
+              direction="left"
+              delay={0.15}
+              className="flex-1 bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl flex flex-col min-h-full"
+            >
               <p className="text-sm">👋 Hey there, I'm</p>
               <h3 className="text-3xl font-bold py-4 md:py-6">
                 Sowunmi OluwaMmayowa
@@ -83,16 +82,20 @@ const Profile = () => {
                 activities that challenge my perspective, spark creativity, and
                 keep me moving forward in both life and career.
               </p>
-            </div>
+            </Reveal>
 
             {/* Image Section */}
-            <div className="flex-1 bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl flex justify-center items-center min-h-full">
+            <Reveal
+              direction="right"
+              delay={0.2}
+              className="flex-1 bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl flex justify-center items-center min-h-full"
+            >
               <img
                 src={ProfilePicture}
                 alt="mayowa picture"
                 className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover rounded-full border-4 border-orange-500"
               />
-            </div>
+            </Reveal>
           </div>
 
           {/* <div className="flex gap-4 flex-col md:flex-row items-center pt-4">
@@ -127,22 +130,28 @@ const Profile = () => {
                 link: "https://x.com/devmayowa",
               },
             ].map((item, index) => (
-              <Link
-                target="_blank"
-                to={item.link}
+              <Reveal
                 key={index}
-                className="flex gap-2 items-center w-full bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl h-full relative overflow-hidden"
-                onMouseMove={(e) => handleMouseMove(e, index)}
-                onMouseLeave={handleMouseLeave}
-                style={glowStyle(index)}
+                direction="up"
+                delay={0.25 + index * 0.08}
+                className="w-full"
               >
-                {item.icon}
-                <p>{item.label}</p>
-              </Link>
+                <Link
+                  target="_blank"
+                  to={item.link}
+                  className="flex gap-2 items-center w-full bg-[#f9f9f9] dark:bg-[#001122] p-6 rounded-xl h-full relative overflow-hidden"
+                  onMouseMove={(e) => handleMouseMove(e, index)}
+                  onMouseLeave={handleMouseLeave}
+                  style={glowStyle(index)}
+                >
+                  {item.icon}
+                  <p>{item.label}</p>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
-      </motion.div>
+      </Reveal>
     </Element>
   );
 };

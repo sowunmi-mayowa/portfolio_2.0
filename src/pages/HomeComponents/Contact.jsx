@@ -8,11 +8,9 @@ import { addDoc, collection } from "firebase/firestore";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import Reveal from "../../components/ui/reveal";
 
 const Contact = () => {
-  const { ref, isInView } = useScrollAnimation();
   const schema = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().email().required(),
@@ -44,16 +42,14 @@ const Contact = () => {
   };
   return (
     <Element name="contact">
-      <motion.div
-        ref={ref}
+      <Reveal
         className="bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
+        direction="up"
+        delay={0.1}
       >
         <div className="mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl py-8 md:py-16">
           <div className="flex justify-between gap-6 md:items-center flex-col md:flex-row">
-            <div className="basis-1/2">
+            <Reveal direction="left" delay={0.15} className="basis-1/2">
               <div>
                 <h3 className="capitalize text-2xl md:text-4xl font-bold">
                   let's talk
@@ -75,8 +71,8 @@ const Contact = () => {
               >
                 <FaWhatsapp className="text-2xl" /> <span>Whatsapp</span>
               </Link>
-            </div>
-            <div className="basis-1/2 ">
+            </Reveal>
+            <Reveal direction="right" delay={0.2} className="basis-1/2 ">
               <form onSubmit={handleSubmit(onSubmitHandler)}>
                 <div className="mb-4">
                   <label htmlFor="name">Name</label>
@@ -128,11 +124,11 @@ const Contact = () => {
                   className="bg-gray-300 dark:bg-[#001122] cursor-pointer border-2  w-full p-4 rounded-xl inline-block"
                 />
               </form>
-            </div>
+            </Reveal>
           </div>
         </div>
         <ToastContainer />
-      </motion.div>
+      </Reveal>
     </Element>
   );
 };

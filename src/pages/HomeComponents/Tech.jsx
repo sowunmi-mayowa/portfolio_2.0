@@ -7,11 +7,9 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 import { DiMongodb } from "react-icons/di";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import Reveal from "../../components/ui/reveal";
 
 const Tech = () => {
-  const { ref, isInView } = useScrollAnimation();
   const stacks = [
     {
       icon: <FaHtml5 className="text-orange" />,
@@ -52,18 +50,14 @@ const Tech = () => {
   ];
 
   return (
-    <motion.div
-      ref={ref}
-      className="bg-white dark:bg-[#001122]"
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6 }}
-    >
+    <Reveal direction="up" delay={0.1} className="bg-white dark:bg-[#001122]">
       <div className="mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl py-16 font-montserrat z-50">
-        <p className="uppercase text-sm md:text-lg py-2 md:py-4">stacks</p>
-        <h3 className="font-semibold text-lg max-w-[270px] md:max-w-[500px] md:text-xl capitalize mb-2">
-          These are the tech stacks i work with
-        </h3>
+        <Reveal direction="up" delay={0.15}>
+          <p className="uppercase text-sm md:text-lg py-2 md:py-4">stacks</p>
+          <h3 className="font-semibold text-lg max-w-[270px] md:max-w-[500px] md:text-xl capitalize mb-2">
+            These are the tech stacks i work with
+          </h3>
+        </Reveal>
         <InfiniteMovingCards
           items={stacks}
           direction="left"
@@ -71,7 +65,7 @@ const Tech = () => {
           pauseOnHover={true}
         />
       </div>
-    </motion.div>
+    </Reveal>
   );
 };
 

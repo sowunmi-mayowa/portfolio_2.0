@@ -2,32 +2,31 @@ import ProjectCard from "../../assets/components/ProjectCard";
 import { Element } from "react-scroll";
 import { Link } from "react-router-dom";
 import { projectData } from "../../utils/projects";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import Reveal from "../../components/ui/reveal";
 
 const Projects = () => {
-  const { ref, isInView } = useScrollAnimation();
-
   return (
     <Element name="projects">
-      <motion.div
-        ref={ref}
+      <Reveal
+        direction="up"
+        delay={0.1}
         className="bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat pb-12 lg:pb-0"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
       >
         <div className="mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl md:py-16 font-montserrat z-50">
-          <div className="flex flex-col :justify-center md:items-center mb-6">
-            <p className="uppercase text-sm md:text-lg pt-8 pb-2">projects</p>
-            <h3 className="font-semibold text-lg md:text-xl capitalize mb-2 max-w-[16rem] md:text-center">
-              Check out some of my recent works
-            </h3>
-          </div>
+          <Reveal direction="up" delay={0.15}>
+            <div className="flex flex-col :justify-center md:items-center mb-6">
+              <p className="uppercase text-sm md:text-lg pt-8 pb-2">projects</p>
+              <h3 className="font-semibold text-lg md:text-xl capitalize mb-2 max-w-[16rem] md:text-center">
+                Check out some of my recent works
+              </h3>
+            </div>
+          </Reveal>
           <div className="hidden md:block">
-            {projectData.slice(0, 3).map((project) => (
-              <div
+            {projectData.slice(0, 3).map((project, idx) => (
+              <Reveal
                 key={project.id}
+                direction={idx % 2 === 0 ? "left" : "right"}
+                delay={0.1 + idx * 0.1}
                 className="bg-[#fff] dark:bg-[#001122] rounded-3xl mb-4 border-2 border-[#ebebeb] dark:border-gray-700"
               >
                 <div className="flex flex-col md:flex-row gap-8 items-center p-8">
@@ -76,12 +75,14 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
           <div className="md:hidden">
-            {projectData.slice(0, 3).map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {projectData.slice(0, 3).map((project, idx) => (
+              <Reveal key={project.id} direction="up" delay={0.1 + idx * 0.1}>
+                <ProjectCard project={project} />
+              </Reveal>
             ))}
           </div>
           <div className="flex justify-center mt-6">
@@ -94,7 +95,7 @@ const Projects = () => {
             {/* <button className="bg-orange text-white px-6 py-2 rounded-full">See more</button> */}
           </div>
         </div>
-      </motion.div>
+      </Reveal>
     </Element>
   );
 };
