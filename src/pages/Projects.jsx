@@ -51,14 +51,6 @@ const Projects = () => {
                       >
                         View Project
                       </a>
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#f9f9f9] dark:bg-[#1b2838] px-6 py-2 rounded-full"
-                      >
-                        Github
-                      </a>
                     </div>
                   </div>
                 </div>

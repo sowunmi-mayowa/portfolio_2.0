@@ -5,8 +5,20 @@ import projectImg4 from "../assets/project-img4.png";
 import projectImg5 from "../assets/project-img5.png";
 import projectImg6 from "../assets/project-img6.png";
 import projectImg7 from "../assets/project-img7.png";
+import projectImg8 from "../assets/project-img8.png";
 
 export const projectData = [
+  {
+    id: Math.floor(Math.random() * 1000),
+    title: "Interviewchip",
+    coompany: "client project",
+    stack: ["Nextjs", "Tailwind", "nodejs", "express", "mongodb"],
+    link: "https://interviewchip-1.onrender.com/",
+    image: projectImg8,
+    isGithubAvailable: false,
+    description:
+      "InterviewChip is an online repository of curated interview questions . It helps job seekers prepare effectively by providing a wide range of commonly asked questions across various topics and difficulty levels.",
+  },
   {
     id: Math.floor(Math.random() * 1000),
     title: "SiQuote",
