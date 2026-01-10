@@ -11,7 +11,7 @@ export const projectData = [
   {
     id: Math.floor(Math.random() * 1000),
     title: "Interviewchip",
-    coompany: "client project",
+    company: "client project",
     stack: ["Nextjs", "Tailwind", "nodejs", "express", "mongodb"],
     link: "https://www.interviewchip.com/",
     image: projectImg8,
