@@ -13,7 +13,7 @@ export const projectData = [
     title: "Interviewchip",
     coompany: "client project",
     stack: ["Nextjs", "Tailwind", "nodejs", "express", "mongodb"],
-    link: "https://interviewchip-1.onrender.com/",
+    link: "https://www.interviewchip.com/",
     image: projectImg8,
     isGithubAvailable: false,
     description:
