@@ -7,7 +7,7 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 import { DiMongodb } from "react-icons/di";
-import Reveal from "../../components/ui/reveal";
+import Reveal from "../../components/ui/reveal.jsx";
 
 const Tech = () => {
   const stacks = [
