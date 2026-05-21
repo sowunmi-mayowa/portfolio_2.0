@@ -6,6 +6,7 @@ import projectImg5 from "../assets/project-img5.png";
 import projectImg6 from "../assets/project-img6.png";
 import projectImg7 from "../assets/project-img7.png";
 import projectImg8 from "../assets/project-img8.png";
+import projectImg9 from "../assets/project-img9.png";
 
 export const projectData = [
   {
@@ -38,6 +39,16 @@ export const projectData = [
     image: projectImg2,
     description:
       "eQuipfy is a platform for buying and selling used heavy equipment across Africa. It connects buyers and sellers, offering a user-friendly experience to trade machinery efficiently while promoting sustainable use of resources",
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    title: "Pastries Website",
+    company: "Client Project",
+    stack: ["Nuxt", "Tailwind"],
+    link: "https://pastries-nu.vercel.app/",
+    image: projectImg9,
+    description:
+      "Demo website for a pastries business with a clean, responsive UI and a language switch (English ⇄ Français). Features product showcase, simple ordering flow, and smooth animations for a polished presentation.",
   },
   {
     id: Math.floor(Math.random() * 1000),

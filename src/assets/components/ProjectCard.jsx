@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
       />
       <h3 className="text-xl font-semibold mt-3">{project.title}</h3>
       <p className="text-sm text-gray-400">Company: {project.company}</p>
-      <div className="flex gap-2 mt-2">
+      <div className="flex gap-2 mt-2 flex-wrap">
         {project.stack.map((tech, index) => (
           <span
             key={index}
@@ -30,7 +30,9 @@ const ProjectCard = ({ project }) => {
         >
           View Project
         </a>
-        <button className="bg-gray-800 text-white px-4 py-2 rounded-md">Github</button>
+        <button className="bg-gray-800 text-white px-4 py-2 rounded-md">
+          Github
+        </button>
       </div>
     </div>
   );
