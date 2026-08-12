@@ -17,16 +17,16 @@ const Footer = () => {
        
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-end space-x-6 pt-4 md:pt-0">
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
+            <a href="https://x.com/devmayowa" target="_blank" rel="noopener noreferrer" aria-label="Mayowa on X" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaTwitter />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
+            <a href="https://github.com/sowunmi-mayowa" target="_blank" rel="noopener noreferrer" aria-label="Mayowa on GitHub" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaGithub />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
+            <a href="https://www.linkedin.com/in/sowunmi-oluwanayowa/" target="_blank" rel="noopener noreferrer" aria-label="Mayowa on LinkedIn" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaLinkedin />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
+            <a href="https://www.instagram.com/devmayowa" target="_blank" rel="noopener noreferrer" aria-label="Mayowa on Instagram" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition text-lg">
               <FaInstagram />
             </a>
           </div>

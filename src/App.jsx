@@ -12,6 +12,7 @@ import { ErrorpPage } from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import Navbar from "./assets/components/Navbar";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import WhatsAppButton from "./assets/components/WhatsAppButton";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           element={<Projects />}
           errorElement={<ErrorpPage />}
         />
+        <Route path="/projects/:slug" element={<ProjectDetail />} errorElement={<ErrorpPage />} />
       </Route>
     )
   );

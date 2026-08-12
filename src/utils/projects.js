@@ -10,7 +10,8 @@ import projectImg9 from "../assets/project-img9.png";
 
 export const projectData = [
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 1,
+    slug: "interviewchip",
     title: "Interviewchip",
     company: "client project",
     stack: ["Nextjs", "Tailwind", "nodejs", "express", "mongodb"],
@@ -21,7 +22,8 @@ export const projectData = [
       "InterviewChip is an online repository of curated interview questions . It helps job seekers prepare effectively by providing a wide range of commonly asked questions across various topics and difficulty levels.",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 2,
+    slug: "siquote",
     title: "SiQuote",
     company: "Ovabor Labs",
     stack: ["React", "firebase"],
@@ -31,7 +33,8 @@ export const projectData = [
       "SiQuote allows users to compare and share pricing for satellite imagery services. It provides a streamlined platform to browse and evaluate quotes for satellite data, simplifying the decision-making process for individuals and organizations requiring geospatial information",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 3,
+    slug: "equipfy",
     title: "Equipfy",
     company: "Ovabor Labs",
     stack: ["React", "MongoDB", "Tailwind"],
@@ -41,7 +44,8 @@ export const projectData = [
       "eQuipfy is a platform for buying and selling used heavy equipment across Africa. It connects buyers and sellers, offering a user-friendly experience to trade machinery efficiently while promoting sustainable use of resources",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 4,
+    slug: "pastries-website",
     title: "Pastries Website",
     company: "Client Project",
     stack: ["Nuxt", "Tailwind"],
@@ -51,17 +55,19 @@ export const projectData = [
       "Demo website for a pastries business with a clean, responsive UI and a language switch (English ⇄ Français). Features product showcase, simple ordering flow, and smooth animations for a polished presentation.",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 5,
+    slug: "brightlife-enhancement-service",
     title: "BrightLife Enhancement Service",
     company: "Client Project",
     stack: ["React", "MongoDB", "Tailwind"],
     link: "#",
     image: projectImg3,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus iure porro minima similique suscipit atque quasi distinctio voluptatem fuga, obcaecati inventore expedita persp",
+      "BrightLife Enhancement Service is a responsive service platform designed to present the company's offerings clearly and make it easier for prospective clients to get in touch.",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 6,
+    slug: "karyavest",
     title: "KaryaVest",
     company: "Ovabor Labs",
     stack: ["React", "CrewAI", "Tailwind", "OpenAI"],
@@ -71,7 +77,8 @@ export const projectData = [
       "KaryaVest is an AI-powered platform creates a tailored resume, customized cover letter and possible interview questions based on the job description provided by the user and the user's professional background",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 7,
+    slug: "dnoir-poetry-bar",
     title: "Dnoir Poetry Bar",
     company: "Client Project",
     stack: ["React", "Tailwind"],
@@ -81,7 +88,8 @@ export const projectData = [
       "D'noir Poetry Bar is a website created to display the portfolio and price list of services of a professional ",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 8,
+    slug: "ovabor-labs-website",
     title: "OvaborLabs Company Website",
     company: "Ovabor Labs",
     stack: ["React", "Tailwind", "Firebase"],
@@ -91,7 +99,8 @@ export const projectData = [
       "The official website for Ovabor Labs, a tech company specializing in web and mobile app development and AI solutions. The site showcases the company's portfolio, services, team, and contact information",
   },
   {
-    id: Math.floor(Math.random() * 1000),
+    id: 9,
+    slug: "arnold-token-website",
     title: "Arnold token website",
     company: "Client Project",
     stack: ["React", "Tailwind", "node js", "Mongo db"],

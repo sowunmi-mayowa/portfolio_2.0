@@ -54,12 +54,12 @@ const Hero = () => {
         <motion.div variants={itemVariants}>
           <TypewriterEffectSmooth words={words} />
         </motion.div>
-        <motion.h3 variants={itemVariants} className="text-xl md:text-3xl font-bold">
-          Welcome to my Portfolio website.
-        </motion.h3>
+        <motion.h1 variants={itemVariants} className="text-2xl md:text-4xl font-bold">
+          Full-Stack React and Node.js Developer in Nigeria
+        </motion.h1>
         <motion.p variants={itemVariants} className="mt-2 text-md md:text-lg max-w-xl">
-          I transform ideas into digital realities, focusing on creating unique
-          and engaging experiences for users.
+          I help businesses turn ideas into fast, accessible web applications
+          using React, Next.js, Node.js, MongoDB, and Firebase.
         </motion.p>
         <motion.div variants={itemVariants}>
           <Link to="contact" smooth={true} duration={500}>
@@ -78,8 +78,8 @@ const Hero = () => {
       >
         <img
           src={hero}
-          alt="Hero image"
-          loading="lazy"
+          alt="Mayowa Sowunmi, full-stack web developer"
+          fetchPriority="high"
           decoding="async"
           className="w-full h-auto block mx-auto lg:mx-0"
         />

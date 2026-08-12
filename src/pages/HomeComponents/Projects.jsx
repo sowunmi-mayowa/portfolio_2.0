@@ -33,7 +33,8 @@ const Projects = () => {
                   <div>
                     <img
                       src={project.image}
-                      alt="siQuote image"
+                      alt={`${project.title} web application interface`}
+                      loading="lazy"
                       className="w-full h-auto object-cover rounded-lg"
                     />
                   </div>
@@ -56,6 +57,9 @@ const Projects = () => {
                       {project.description}
                     </p>
                     <div className="flex gap-4">
+                      <Link to={`/projects/${project.slug}`} className="border border-orange px-6 py-2 rounded text-sm">
+                        Read case study
+                      </Link>
                       <a
                         href={project.link}
                         target="_blank"

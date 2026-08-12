@@ -2,19 +2,26 @@ import React from "react";
 import { projectData } from "../utils/projects";
 import ProjectCard from "../assets/components/ProjectCard";
 import Navbar from "../assets/components/Navbar";
+import Seo from "../components/Seo";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
     <div>
+      <Seo
+        title="Web Development Projects | Mayowa Sowunmi"
+        description="Explore full-stack web development projects by Mayowa Sowunmi, including React, Next.js, Node.js, MongoDB, Firebase, and AI-powered applications."
+        path="/projects"
+      />
       <div>
         <Navbar />
       </div>
       <div className="bg-[#f9f9f9] dark:bg-[#162c42] font-montserrat flex items-center justify-center">
         <div className="mx-8 md:mx-12 xl:mx-auto xl:max-w-6xl py-8 md:py-16 mt-16">
           <div className="flex flex-col :justify-center md:items-center">
-            {/* <h1 className="font-semibold text-lg md:text-xl capitalize mb-2 max-w-[16rem] md:text-center">
-              Projects
-            </h1> */}
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              Full-Stack Web Development Projects
+            </h1>
             <div className="hidden md:block">
               {projectData.map((project) => (
                 <div
@@ -25,7 +32,8 @@ const Projects = () => {
                     <div>
                       <img
                         src={project.image}
-                        alt="siQuote image"
+                        alt={`${project.title} web application interface`}
+                        loading="lazy"
                         className="h-auto object-cover rounded-lg w-[492px]"
                       />
                     </div>
@@ -48,6 +56,9 @@ const Projects = () => {
                         {project.description}
                       </p>
                       <div className="flex gap-4">
+                        <Link to={`/projects/${project.slug}`} className="border border-orange px-6 py-2 rounded text-sm">
+                          Read case study
+                        </Link>
                         <a
                           href={project.link}
                           target="_blank"

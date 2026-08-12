@@ -66,7 +66,9 @@ const Contact = () => {
                 <FaEnvelope className="text-2xl" /> <span>Email</span>
               </Link>
               <Link
-                to="https:wa.me/2349032073275"
+                to="https://wa.me/2349032073275"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex gap-2 items-center w-full md:w-1/2 bg-[#fff] dark:bg-[#001122] p-6 rounded-xl h-full relative overflow-hidden"
               >
                 <FaWhatsapp className="text-2xl" /> <span>Whatsapp</span>

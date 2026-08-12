@@ -14,7 +14,7 @@ const Profile = () => {
   useEffect(() => {
     // Detect dark mode
     const darkModeMediaQuery = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     );
     setIsDarkMode(darkModeMediaQuery.matches);
 
@@ -63,24 +63,30 @@ const Profile = () => {
             >
               <p className="text-sm">👋 Hey there, I'm</p>
               <h3 className="text-3xl font-bold py-4 md:py-6">
-                Sowunmi OluwaMmayowa
+                Sowunmi Oluwamayowa
               </h3>
               <p className="text-md flex-grow">
-                I hold a National Diploma (ND) in Computer Science from the
-                Federal Polytechnic Ilaro and am currently pursuing a Bachelor’s
-                degree in Computer Science at the Prestigious Federal University
-                of Agriculture Abeokuta. My journey into tech has led me to a
-                role as a front-end developer at Ovabor Labs, where I specialize
-                in building dynamic, high-performance applications using the
-                MERN stack—particularly with React, MongoDB, and Firebase.
+                I’m a FullStack Developer focused on building modern,
+                responsive, and high-performance web applications. With a
+                background in Computer Science and professional experience at
+                several Companies, I specialize in transforming ideas and
+                designs into functional, scalable, and user-friendly digital
+                experiences.
               </p>
-              <p className="text-md mt-4">
-                Outside of work, I’m an explorer of both digital and real-world
-                landscapes. Whether diving into the latest web development
-                trends or seeking new experiences outdoors, I’m always on the
-                lookout for something fresh and exciting. I’m drawn to
-                activities that challenge my perspective, spark creativity, and
-                keep me moving forward in both life and career.
+
+              <p className="text-md flex-grow">
+                My development experience spans React, NextJs, JavaScript, the
+                MERN stack, MongoDB, Firebase, and modern web technologies. I
+                enjoy solving complex problems, writing maintainable code, and
+                continuously exploring better ways to build reliable and
+                engaging products.
+              </p>
+
+              <p>
+                Beyond development, I’m passionate about technology, innovation,
+                and continuous growth. I’m always looking for opportunities to
+                work on challenging projects, learn new technologies, and
+                contribute to products that make a meaningful impact.
               </p>
             </Reveal>
 
@@ -92,7 +98,7 @@ const Profile = () => {
             >
               <img
                 src={ProfilePicture}
-                alt="mayowa picture"
+                alt="Portrait of Mayowa Sowunmi"
                 className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover rounded-full border-4 border-orange-500"
               />
             </Reveal>
